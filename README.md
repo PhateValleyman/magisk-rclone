@@ -5,7 +5,7 @@ Remount cloud storage locally during boot via rclone & fusermount directly on yo
 
 Virtually limitless storage expansion with support for dozens of cloud providers including Dropbox, GDrive, OneDrive, SFTP & many more. Extremely useful for devices without physical storage expansion capabilities. Also great for streaming large media files without need for full caching.  Binaries compiled using Termux. 
 
-We are constantly striving to improve this project & make it the best. If you experience any issues or have suggestions please file them  [HERE](https://github.com/Magisk-Modules-Repo/com.piyushgarg.rclone/issues). Contributions to this project are welcomed. 
+We are constantly striving to improve this project & make it the best. If you experience any issues or have suggestions please file them  [HERE](https://github.com/Magisk-Modules-Repo/magisk-rclone/issues). Contributions to this project are welcomed. 
 
 ## Features
 
@@ -15,7 +15,7 @@ We are constantly striving to improve this project & make it the best. If you ex
 
 - Apps with ability to specify paths can access `/mnt/cloud/`
 
-- Most file explorers work just fine ([issue #9](https://github.com/Magisk-Modules-Repo/com.piyushgarg.rclone/issues/9))
+- Most file explorers work just fine ([issue #9](https://github.com/Magisk-Modules-Repo/magisk-rclone/issues/9))
 
 - Mount points use names of remote(s) in rclone.conf
 
@@ -25,7 +25,7 @@ We are constantly striving to improve this project & make it the best. If you ex
 
 - Access remotes via [ftp://127.0.0.1:38763](ftp://127.0.0.1:38763)
 
-- Mount bind to `/sdcard/` (see [ issue #5](https://github.com/Magisk-Modules-Repo/com.piyushgarg.rclone/issues/5))
+- Mount bind to `/sdcard/` (see [ issue #5](https://github.com/Magisk-Modules-Repo/magisk-rclone/issues/5))
 
 - Support for Work Profiles 
 
@@ -118,7 +118,7 @@ Specification of rclone parameters on a per remote basis can be created inside h
          4| ADD_PARAMS=--fast-list --allow-non-empty
          5| 
 
-    **NOTE:** _There is no need to specify values you do not wish to change. Ensure a line break/carriage return exist after each specified param or they will not be parsed. For more information see [issue #2](https://github.com/Magisk-Modules-Repo/com.piyushgarg.rclone/issues/2)_
+    **NOTE:** _There is no need to specify values you do not wish to change. Ensure a line break/carriage return exist after each specified param or they will not be parsed. For more information see [issue #2](https://github.com/Magisk-Modules-Repo/magisk-rclone/issues/2)_
 
 - Custom remote params example #2 (using SUBPATH)
 
@@ -246,7 +246,7 @@ specify `CACHEMODE=off` in `/sdcard/.rclone/.ALIASNAME.param`
 
 - Encrypted `rclone.conf` causes reboots
 
-- High cpu/mem in some apps with storage perms ([issue #9](https://github.com/Magisk-Modules-Repo/com.piyushgarg.rclone/issues/9))
+- High cpu/mem in some apps with storage perms ([issue #9](https://github.com/Magisk-Modules-Repo/magisk-rclone/issues/9))
 - The `fusermount` bin may not be compatible on all devices (see  [thread](https://www.google.com/amp/s/forum.xda-developers.com/android/development/fusermount-android-rclone-mount-t3866652/amp/))
 
 ---

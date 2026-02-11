@@ -3,7 +3,7 @@
 MODDIR="$(dirname "$(readlink -f "$0")")"
 UPDDIR=/data/adb/modules_update
 IMGDIR=/sbin/.core/img
-id=com.piyushgarg.rclone
+id=magisk-rclone
 
 USER_CONFDIR=/sdcard/.rclone
 USER_CONF=${USER_CONFDIR}/rclone.conf

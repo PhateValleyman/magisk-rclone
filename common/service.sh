@@ -11,7 +11,7 @@ MODDIR="$(dirname "$(readlink -f "$0")")"
 
 IMGDIR=/sbin/.core/img
 UPDDIR=/data/adb/modules_update
-id=com.piyushgarg.rclone
+id=magisk-rclone
 
 ## resolve links - $0 may be a link to module home
 PRG="$0"

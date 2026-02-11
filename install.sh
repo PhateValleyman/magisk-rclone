@@ -142,23 +142,12 @@ on_install() {
   ui_print "+ ====="
   ui_print "+ ====="
 
-  if [ "$ARCH" == "arm" ];then
-    ui_print "+ downloading rclone-$ARCH to $MODPATH/rclone"
-    curl "https://beta.rclone.org/test/testbuilds-latest/rclone-android-16-armv7a.gz" | gunzip -d - > "$MODPATH"/rclone
-  elif [ "$ARCH" == "arm64" ];then
-    ui_print "+ downloading rclone-$ARCH to $MODPATH/rclone"
-    curl "https://beta.rclone.org/test/testbuilds-latest/rclone-android-21-armv8a.gz" | gunzip -d - > "$MODPATH"/rclone
-  elif [ "$ARCH" == "x86" ];then
-    curl "https://beta.rclone.org/test/testbuilds-latest/rclone-android-16-x86.gz" | gunzip -d - > "$MODPATH"/rclone
-  elif [ "$ARCH" == "x64" ];then
-    curl "https://beta.rclone.org/test/testbuilds-latest/rclone-android-21-x64.gz" | gunzip -d - > "$MODPATH"/rclone
-  fi
 
   CONFIG_PATH=$TMPDIR/config
 
-  ui_print "+ Extracting fusermount-$ARCH to $MODPATH/fusermount"
-  unzip -p "$ZIPFILE" binary/fusermount-${ARCH} > $MODPATH/fusermount
-  ui_print "+ Extracting lib-${ARCH}/libandroid-support.so to $MODPATH/libandroid-support.so"
+  ui_print "+ Extracting fusermount to $MODPATH/fusermount"
+  unzip -p "$ZIPFILE" binary/fusermount > $MODPATH/fusermount
+  ui_print "+ Extracting libandroid-support.so to $MODPATH/libandroid-support.so"
   unzip -p "$ZIPFILE" lib-${ARCH}/libandroid-support.so > $MODPATH/libandroid-support.so
   ui_print "+ Extracting rclone-wrapper.sh script to $MODPATH/rclonew"
   unzip -p "$ZIPFILE" binary/rclone-wrapper.sh > $MODPATH/rclonew
